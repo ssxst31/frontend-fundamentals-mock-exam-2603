@@ -8,4 +8,6 @@ export interface Reservation {
   equipment: string[];
 }
 
+export type ReservationInput = Omit<Reservation, 'id'>;
+
 export type ReservationResult = { ok: true; reservation?: unknown } | { ok: false; message: string };
